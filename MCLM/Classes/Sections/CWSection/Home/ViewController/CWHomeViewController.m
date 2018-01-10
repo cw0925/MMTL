@@ -23,7 +23,9 @@
     }
     return _requestVM;
 }
-
+- (void)test{
+    NSLog(@"test");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
