@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CWHomeShopListCell">
+            <rect key="frame" x="0.0" y="0.0" width="137" height="181"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="137" height="181"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X39-NT-XeJ">
+                        <rect key="frame" x="6" y="6" width="125" height="125"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="X39-NT-XeJ" secondAttribute="height" multiplier="1:1" id="o5T-7G-BRn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lU-32-Ofp">
+                        <rect key="frame" x="6" y="134" width="124" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="kQa-ga-97i"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="X39-NT-XeJ" secondAttribute="trailing" constant="6" id="4Lh-Qf-A9c"/>
+                <constraint firstAttribute="trailing" secondItem="5lU-32-Ofp" secondAttribute="trailing" constant="7" id="JOa-ts-zmm"/>
+                <constraint firstItem="5lU-32-Ofp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="LWW-uT-QSd"/>
+                <constraint firstItem="5lU-32-Ofp" firstAttribute="top" secondItem="X39-NT-XeJ" secondAttribute="bottom" constant="3" id="Vpn-I6-3ks"/>
+                <constraint firstItem="X39-NT-XeJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="jrB-aO-8sH"/>
+                <constraint firstItem="X39-NT-XeJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="kOM-EN-kKd"/>
+            </constraints>
+            <size key="customSize" width="137" height="181"/>
+            <connections>
+                <outlet property="icon" destination="X39-NT-XeJ" id="yDZ-bb-qj1"/>
+                <outlet property="name" destination="5lU-32-Ofp" id="6WY-Yn-Oop"/>
+            </connections>
+            <point key="canvasLocation" x="-48.5" y="42.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

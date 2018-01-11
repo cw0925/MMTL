@@ -9,47 +9,66 @@
 #import "CWHomeViewController.h"
 #import "CWHomeViewModel.h"
 
+//#import "CWShopListModel.h"
+
 @interface CWHomeViewController ()
 
 @property (nonatomic,strong) CWHomeViewModel *requestVM;
+@property (nonatomic,strong) UICollectionView *homeCollectionView;
 
 @end
 
 @implementation CWHomeViewController
 
-- (CWHomeViewModel *)requestVM{
-    if (!_requestVM) {
-        _requestVM = [[CWHomeViewModel alloc] init];
-    }
-    return _requestVM;
-}
-- (void)test{
-    NSLog(@"test");
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self getDataSource];
+    [self itemClick];
+}
+- (UICollectionView *)homeCollectionView{
+    if (!_homeCollectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        _homeCollectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
+        _homeCollectionView.backgroundColor = [UIColor whiteColor];
+        _homeCollectionView.delegate = self.requestVM;
+        _homeCollectionView.dataSource = self.requestVM;
+        [self.view addSubview:_homeCollectionView];
+        [_homeCollectionView registerNib:[UINib nibWithNibName:@"CWHomeShopListCell" bundle:nil] forCellWithReuseIdentifier:@"shopCell"];
+        [_homeCollectionView registerNib:[UINib nibWithNibName:@"CWGoodInfoCell" bundle:nil] forCellWithReuseIdentifier:@"goodCell"];
+        [_homeCollectionView registerNib:[UINib nibWithNibName:@"CWSectionHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"sectionHeader"];
+    }
+    return _homeCollectionView;
 }
 - (void)getDataSource{
-    RACSignal *signal = [self.requestVM.requestCommand execute:nil];
-    [signal subscribeNext:^(NSArray* x) {
-        NSLog(@"接收数据：%@",x);
+    @weakify(self);
+    [[[self.requestVM.requestCommand execute:nil]
+      deliverOn:[RACScheduler mainThreadScheduler]]
+     subscribeNext:^(NSArray *x) {
+         @strongify(self);
+         
+         self.requestVM.shopListDataArr = x[0];
+         self.requestVM.dproductListDataArr = x[1];
+         self.requestVM.rproductListDataArr = x[2];
+         self.requestVM.prodyctTryListDataArr = x[3];
+        
+         [self.homeCollectionView reloadData];
+     }];
+}
+- (void)itemClick{
+    self.requestVM.selectCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(RACTuple *turple) {
+        NSLog(@"点击：%@",[turple first]);
+        return [RACSignal empty];
     }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CWHomeViewModel *)requestVM{
+    if (!_requestVM) {
+        _requestVM = [[CWHomeViewModel alloc] init];
+    }
+    return _requestVM;
 }
-*/
-
 @end

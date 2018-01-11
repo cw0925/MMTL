@@ -24,6 +24,15 @@
 		CC39676C2005B87A00FE53C7 /* MCLMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC39676B2005B87A00FE53C7 /* MCLMUITests.m */; };
 		CCAF30A32005EEA30025F3D2 /* AFNetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAF30A12005EEA20025F3D2 /* AFNetHelper.m */; };
 		CCAF30AC2005FC720025F3D2 /* CWHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAF30AB2005FC720025F3D2 /* CWHomeViewModel.m */; };
+		CCE9295A2006FA3000BE5F82 /* CWCollectionViewBindingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE929592006FA3000BE5F82 /* CWCollectionViewBindingHelper.m */; };
+		CCE9295F2007033700BE5F82 /* CWHomeShopListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE9295D2007033700BE5F82 /* CWHomeShopListCell.m */; };
+		CCE929602007033700BE5F82 /* CWHomeShopListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCE9295E2007033700BE5F82 /* CWHomeShopListCell.xib */; };
+		CCE929632007055400BE5F82 /* CWShopListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE929622007055400BE5F82 /* CWShopListModel.m */; };
+		CCE9296620070DCC00BE5F82 /* CWTableViewBindingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE9296520070DCC00BE5F82 /* CWTableViewBindingHelper.m */; };
+		CCE929742007404B00BE5F82 /* CWGoodInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE929722007404B00BE5F82 /* CWGoodInfoCell.m */; };
+		CCE929752007404B00BE5F82 /* CWGoodInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCE929732007404B00BE5F82 /* CWGoodInfoCell.xib */; };
+		CCE9297A2007557E00BE5F82 /* CWSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE929782007557E00BE5F82 /* CWSectionHeaderView.m */; };
+		CCE9297B2007557E00BE5F82 /* CWSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCE929792007557E00BE5F82 /* CWSectionHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +89,23 @@
 		CCAF30A62005F1FC0025F3D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CCAF30AA2005FC720025F3D2 /* CWHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWHomeViewModel.h; sourceTree = "<group>"; };
 		CCAF30AB2005FC720025F3D2 /* CWHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWHomeViewModel.m; sourceTree = "<group>"; };
+		CCE929582006FA3000BE5F82 /* CWCollectionViewBindingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWCollectionViewBindingHelper.h; sourceTree = "<group>"; };
+		CCE929592006FA3000BE5F82 /* CWCollectionViewBindingHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWCollectionViewBindingHelper.m; sourceTree = "<group>"; };
+		CCE9295B2006FFD700BE5F82 /* CWBindViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWBindViewDelegate.h; sourceTree = "<group>"; };
+		CCE9295C2007033700BE5F82 /* CWHomeShopListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CWHomeShopListCell.h; path = MCLM/Classes/Helpers/CWHomeShopListCell.h; sourceTree = SOURCE_ROOT; };
+		CCE9295D2007033700BE5F82 /* CWHomeShopListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CWHomeShopListCell.m; path = MCLM/Classes/Helpers/CWHomeShopListCell.m; sourceTree = SOURCE_ROOT; };
+		CCE9295E2007033700BE5F82 /* CWHomeShopListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CWHomeShopListCell.xib; path = MCLM/Classes/Helpers/CWHomeShopListCell.xib; sourceTree = SOURCE_ROOT; };
+		CCE929612007055400BE5F82 /* CWShopListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CWShopListModel.h; path = MCLM/Classes/Helpers/CWShopListModel.h; sourceTree = SOURCE_ROOT; };
+		CCE929622007055400BE5F82 /* CWShopListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CWShopListModel.m; path = MCLM/Classes/Helpers/CWShopListModel.m; sourceTree = SOURCE_ROOT; };
+		CCE9296420070DCC00BE5F82 /* CWTableViewBindingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWTableViewBindingHelper.h; sourceTree = "<group>"; };
+		CCE9296520070DCC00BE5F82 /* CWTableViewBindingHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWTableViewBindingHelper.m; sourceTree = "<group>"; };
+		CCE929712007404B00BE5F82 /* CWGoodInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWGoodInfoCell.h; sourceTree = SOURCE_ROOT; };
+		CCE929722007404B00BE5F82 /* CWGoodInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWGoodInfoCell.m; sourceTree = SOURCE_ROOT; };
+		CCE929732007404B00BE5F82 /* CWGoodInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CWGoodInfoCell.xib; sourceTree = SOURCE_ROOT; };
+		CCE929762007496D00BE5F82 /* ToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolView.h; sourceTree = "<group>"; };
+		CCE929772007557E00BE5F82 /* CWSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CWSectionHeaderView.h; path = MCLM/Classes/Macro/CWSectionHeaderView.h; sourceTree = SOURCE_ROOT; };
+		CCE929782007557E00BE5F82 /* CWSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CWSectionHeaderView.m; path = MCLM/Classes/Macro/CWSectionHeaderView.m; sourceTree = SOURCE_ROOT; };
+		CCE929792007557E00BE5F82 /* CWSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CWSectionHeaderView.xib; path = MCLM/Classes/Macro/CWSectionHeaderView.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +195,7 @@
 			children = (
 				CCAF30A52005F0490025F3D2 /* APIMacro.h */,
 				CCAF30A62005F1FC0025F3D2 /* PrefixHeader.pch */,
+				CCE929762007496D00BE5F82 /* ToolView.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -178,6 +205,11 @@
 			children = (
 				CCAF30A22005EEA20025F3D2 /* AFNetHelper.h */,
 				CCAF30A12005EEA20025F3D2 /* AFNetHelper.m */,
+				CCE929582006FA3000BE5F82 /* CWCollectionViewBindingHelper.h */,
+				CCE929592006FA3000BE5F82 /* CWCollectionViewBindingHelper.m */,
+				CCE9295B2006FFD700BE5F82 /* CWBindViewDelegate.h */,
+				CCE9296420070DCC00BE5F82 /* CWTableViewBindingHelper.h */,
+				CCE9296520070DCC00BE5F82 /* CWTableViewBindingHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -265,6 +297,8 @@
 		CC1D7F6D2005BE7D007055F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CCE929612007055400BE5F82 /* CWShopListModel.h */,
+				CCE929622007055400BE5F82 /* CWShopListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +306,15 @@
 		CC1D7F6E2005BE7D007055F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCE9295C2007033700BE5F82 /* CWHomeShopListCell.h */,
+				CCE9295D2007033700BE5F82 /* CWHomeShopListCell.m */,
+				CCE9295E2007033700BE5F82 /* CWHomeShopListCell.xib */,
+				CCE929712007404B00BE5F82 /* CWGoodInfoCell.h */,
+				CCE929722007404B00BE5F82 /* CWGoodInfoCell.m */,
+				CCE929732007404B00BE5F82 /* CWGoodInfoCell.xib */,
+				CCE929772007557E00BE5F82 /* CWSectionHeaderView.h */,
+				CCE929782007557E00BE5F82 /* CWSectionHeaderView.m */,
+				CCE929792007557E00BE5F82 /* CWSectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -548,6 +591,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE929752007404B00BE5F82 /* CWGoodInfoCell.xib in Resources */,
+				CCE929602007033700BE5F82 /* CWHomeShopListCell.xib in Resources */,
+				CCE9297B2007557E00BE5F82 /* CWSectionHeaderView.xib in Resources */,
 				CC3967542005B87A00FE53C7 /* LaunchScreen.storyboard in Resources */,
 				CC3967512005B87A00FE53C7 /* Assets.xcassets in Resources */,
 				CC1D7F8F2005DA09007055F0 /* Controller.plist in Resources */,
@@ -634,10 +680,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE9295F2007033700BE5F82 /* CWHomeShopListCell.m in Sources */,
 				CC1D7F802005D972007055F0 /* CWBaseViewController.m in Sources */,
 				CC1D7F862005D998007055F0 /* CWMyViewController.m in Sources */,
+				CCE9297A2007557E00BE5F82 /* CWSectionHeaderView.m in Sources */,
 				CC1D7F5A2005BAF7007055F0 /* AppDelegate.m in Sources */,
+				CCE9295A2006FA3000BE5F82 /* CWCollectionViewBindingHelper.m in Sources */,
 				CC1D7F8C2005D9BD007055F0 /* CWCartViewController.m in Sources */,
+				CCE929632007055400BE5F82 /* CWShopListModel.m in Sources */,
+				CCE9296620070DCC00BE5F82 /* CWTableViewBindingHelper.m in Sources */,
+				CCE929742007404B00BE5F82 /* CWGoodInfoCell.m in Sources */,
 				CCAF30A32005EEA30025F3D2 /* AFNetHelper.m in Sources */,
 				CC1D7F832005D988007055F0 /* CWHomeViewController.m in Sources */,
 				CC1D7F892005D9AF007055F0 /* CWGoodViewController.m in Sources */,
